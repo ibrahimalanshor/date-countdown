@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	.icon {
+		@apply w-4 h-4;
+	}
+}
+
+@layer components {
+	.wrapper, .modal {
+		@apply h-screen w-full flex items-center justify-center;
+	}
+
+	.wrapper {
+		@apply bg-gray-900 text-white bg-cover relative;
+	}
+
+	.overlay {
+		@apply bg-gray-900 opacity-50 absolute top-0 left-0 w-full h-full;
+	}
+
+	.title {
+		@apply text-center flex items-center justify-center mb-4;
+	}
+	.title .now {
+		@apply text-gray-100 text-xl font-bold;
+	}
+	.title .edit {
+		@apply ml-2 mt-1;
+	}
+	.title .icon {
+		@apply text-gray-300;
+	}
+
+	.box {
+		@apply relative flex border border-gray-400 shadow-lg;
+	}
+	.box .count {
+		@apply w-44 h-44 relative flex items-center justify-center;
+	}
+	.box .number {
+		@apply w-full h-32 flex items-center text-center justify-center border-r border-gray-400;
+	}
+	.box .number.last {
+		@apply border-r-0;
+	} 
+	.box .diff {
+		@apply text-7xl font-semibold block;
+	}
+
+	.countdown {
+		background-image: url(https://source.unsplash.com/WLUHO9A_xik/1600x900);
+		font-family: 'Open Sans', Arial, sans-serif;
+	}
+
+	.modal {
+		@apply absolute top-0 left-0;
+	}
+	.form {
+		@apply bg-white w-1/4 rounded p-4 relative;
+	}
+	.input {
+		@apply mb-4;
+	}
+	.modal input {
+		@apply block w-full border px-3 py-2 mt-2 rounded text-gray-600;
+	}
+	.modal input.error {
+		@apply border-red-500 text-red-600;
+	}
+	.modal small.error {
+		@apply text-red-600;
+	}
+	.modal .submit {
+		@apply bg-blue-500 text-white text-sm px-3 h-9 rounded;
+	}
+	.modal .close {
+		@apply absolute top-4 right-4;
+	}
+}
